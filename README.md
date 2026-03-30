@@ -1,8 +1,8 @@
 # projeto_conectarte:
 ## Tema
-plataforma para a divulgação de oportunidades de trabalhos artísticos e serviços de arte, além da capacitação de artistas.
+plataforma para conexão e desenvolvimento artístico sustentável, integrando diversos tipos de arte
 ## Estrutura
-Duas páginas: uma para login e apresentação do site, e outra dividida em perfil, cursos e trabalhos
+Duas páginas: uma para integração, que mostre o visual do site, e outra como hub do artista, que exiba perfil, cursos e área de trabalhos
 ## Área de atuação:
 Serviços
 ## Equipe
