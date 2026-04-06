@@ -1,17 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conectarte: Encontre seu lugar na arte</title>
+    <title>Conectarte - Início</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="container">
-        <div id="header">Conectarte</div>
-        <div id="menu">login  |  sobre nós</div>
-        <div id="body-page">descrição</div>
-        <div id="footer">área de login</div>
+
+    <!-- Cabeçalho-->
+    <div id="cabecalho">
+        <img src="logo-bolha.png" alt="Logo Conectarte" width="150">
+        <h1>Conectarte</h1>
+        <p>Viva a tecnologia. Sinta a arte.</p>
     </div>
+
+    <!-- Conteúdo Principal-->
+    <div id="conteudo-principal">
+
+        <!-- Seção de Login-->
+        <div id="sessao-login">
+            <h2>Acesse seu Hub Artístico</h2>
+            <form action="#">
+                <!-- Identificação Básica -->
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" placeholder="seu@email.com">
+
+                <!-- Seção para quem é Artista -->
+                <p><strong>Se você é Artista:</strong></p>
+                <label for="categoria">Modalidade:</label><br>
+                <select id="categoria" name="categoria">
+                    <option value="digital">Arte Digital / Vtuber</option>
+                    <option value="fisica">Artesanato / Costura</option>
+                    <option value="escrita">Roteiro / Literatura</option>
+                </select><br><br>
+
+                <label for="portfolio">Link do Portfólio:</label><br>
+                <input type="text" id="portfolio" name="portfolio" placeholder="Seu link aqui"><br><br>
+
+                <!-- Seção para quem é Cliente -->
+                <p><strong>Se você é Cliente:</strong></p>
+                <label for="documento">CPF ou CNPJ:</label><br>
+                <input type="text" id="documento" name="documento" placeholder="000.000.000-00"><br><br>
+
+                <input type="submit" value="Conectar-te">
+            </form>
+        </div>
+
+        <!-- Seção de Info-->
+        <div id="sessao-info">
+            <h2>Ecossistema de Talentos</h2>
+            <p><strong>Níveis de Conexão</strong></p> <!-- Substituto para o caption -->
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nível</th>
+                        <th>Perfil do Artista</th>
+                        <th>Público-Alvo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Água</td>
+                        <td>Iniciantes e Estudantes</td>
+                        <td>Entusiastas e RPG</td>
+                    </tr>
+                    <tr>
+                        <td>Bolha</td>
+                        <td>Intermediários e Vtubers</td>
+                        <td>Criadores de Conteúdo</td>
+                    </tr>
+                    <tr>
+                        <td>Cristalino</td>
+                        <td>Profissionais Certificados</td>
+                        <td>Grandes Corporações</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Rodapé-->
+    <div id="rodape">
+        <p>Desenvolvido por Enzo</p>
+    </div>
+
 </body>
+
 </html>
