@@ -1,0 +1,42 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0f7fa;
+    color: #01579b;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#cabecalho {
+    background-color: #81d4fa;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#menu {   
+    display: flex; 
+    justify-content: center;
+    gap: 50px;     
+}
+
+#sessao-login {
+    background-color: #ffffff;
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+#sessao-sobre-nos{
+    font-size:x-large;
+    text-align: left;
+    margin: auto;
+    width: 80%;
+}
+
+#rodape {
+    background-color: #01579b;
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+}
