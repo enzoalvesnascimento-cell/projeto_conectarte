@@ -1,37 +1,36 @@
+.logo {
+    width: 110px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+}
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #e0f7fa;
-    color: #01579b;
+.texto-cabecalho {
+    text-align: left; 
+}
+
+.texto-cabecalho h1 {
     margin: 0;
-    padding: 0;
-    text-align: center;
 }
 
 #cabecalho {
-    background-color: #81d4fa;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-
-#menu {   
-    display: flex; 
-    justify-content: center;
-    gap: 50px;     
+    background-color: #81d4fac5;
+    padding: 20px 40px;
+    border-bottom: 3px solid #00acc1;
+    display: flex;          
+    flex-direction: row;    
+    align-items: center;    
+    justify-content: center; 
+    gap: 20px;             
 }
 
 #sessao-login {
-    background-color: #ffffff;
-    width: 300px;
+    background-color: rgba(255, 255, 255, 0.849);
+    width: 320px;
     margin: 30px auto;
     padding: 20px;
-}
-
-#sessao-sobre-nos{
-    font-size:x-large;
-    text-align: left;
-    margin: auto;
-    width: 80%;
+    border-radius: 15px;
+    border: 1px solid #b3e5fc;
 }
 
 #rodape {
