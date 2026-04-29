@@ -1,0 +1,174 @@
+.logo {
+    width: 110px;
+    height: auto;
+    margin-bottom: 10px;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+}
+
+.texto-cabecalho {
+    text-align: left; 
+}
+
+.texto-cabecalho h1 {
+    margin: 0;
+}
+
+.botoes-nicho {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.botao-conectar {
+    background-color: #00acc1; /* O azul que você já usa */
+    color: white;
+    padding: 12px 25px;
+    border: none;             /* Isso remove a borda preta padrão */
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    outline: none;            /* Remove a linha de seleção ao clicar */
+}
+
+.botao-conectar:hover {
+    background-color: #01579b;
+    transform: scale(1.02);   /* Dá um leve zoom ao passar o mouse */
+}
+
+/* Aplica o estilo em todos os campos de uma vez */
+input[type="text"], 
+input[type="url"], 
+input[type="number"], 
+select, 
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #b3e5fc; /* Uma borda azul bem clarinha */
+    border-radius: 5px;
+    background-color: white;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;    /* Garante que o campo não passe do limite da caixa */
+}
+
+/* Efeito de foco: quando o usuário clica para digitar */
+input:focus, select:focus, textarea:focus {
+    border-color: #00acc1;     /* A borda fica do azul do seu tema */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 172, 193, 0.3); /* Um brilho azul suave */
+}
+
+/* 1. Esconde o input real de forma que ele ainda funcione para o navegador */
+input[type="file"] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+/* 2. Estiliza o Label para parecer um botão da Conectarte */
+.botao-upload {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff;
+    color: #00acc1;
+    border: 2px dashed #00acc1; /* Borda tracejada dá ideia de "solte aqui" */
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/* 3. Efeito ao passar o mouse */
+.botao-upload:hover {
+    background-color: #e0f7fa;
+    border-style: solid;
+    transform: translateY(-2px);
+}
+
+/* 4. Efeito quando o usuário usa o teclado (acessibilidade) */
+input[type="file"]:focus + .botao-upload {
+    outline: 2px solid #01579b;
+}
+
+select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+.campo-icone {
+    width: 100%;
+    display: block; /* Evita que ela tente ficar ao lado de outros elementos */
+}
+
+/* Estilo específico para o input de WhatsApp */
+input[type="tel"] {
+    width: 100%;             /* Ocupa toda a largura disponível */
+    box-sizing: border-box;  /* ESSENCIAL: Inclui o padding no cálculo da largura */
+    padding: 12px 12px 12px 40px; 
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: block;          /* Garante que ele se comporte como um bloco */
+    
+    /* Mantenha o resto das suas configurações (border, background-image, etc) */
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 12px center;
+}
+
+/* Efeito quando o usuário clica no campo */
+input[type="tel"]:focus {
+    border-color: #25D366; /* Cor oficial do WhatsApp */
+    box-shadow: 0 0 8px rgba(37, 211, 102, 0.2);
+    outline: none;
+}
+
+#cabecalho {
+    background-color: #81d4fac5;
+    padding: 20px 40px;
+    border-bottom: 3px solid #00acc1;
+    display: flex;          
+    flex-direction: row;    
+    align-items: center;    
+    justify-content: center; 
+    gap: 20px;             
+}
+
+#sessao-login {
+    background-color: rgba(255, 255, 255, 0.849);
+    width: 320px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #b3e5fc;
+}
+
+#rodape {
+    background-color: #01579b;
+    color: white;
+    padding: 10px;
+    margin-top: 50px;
+}

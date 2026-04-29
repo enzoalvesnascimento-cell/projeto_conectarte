@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conectarte - Início</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <div id="fundo-site"></div>
+    <div id="cabecalho">
+        <img src="Imagens/logo_conectarte.png" alt="Logo Conectarte" class="logo">
+        <div class="texto-cabecalho">
+            <h1>Conectarte</h1>
+            <p>Viva a tecnologia. Sinta a arte.</p>
+        </div>
+    </div>
+
+    <div id="conteudo-principal">
+        <div class="texto-apresentacao">
+            <h2>Mostre sua arte ao mundo! 🎨</h2>
+            <p>Crie seu perfil profissional e seja encontrado por clientes que valorizam sua criatividade.</p>
+        </div>
+
+        <div id="sessao-login">
+            <h3>Cadastro de Artista</h3>
+            <form action="sucesso.html">
+                <label>Nome Artístico / Pseudônimo:</label>
+                <input type="text" placeholder="Como você aparecerá na plataforma" required>
+
+                <div style="background-color: #f1f8fb; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+                    <p style="font-size: 0.8rem; color: #01579b; margin-bottom: 5px;"><strong>🔒 Uso Interno (Segurança
+                            e Contratos):</strong></p>
+                    <label>Nome Real:</label>
+                    <input type="text" placeholder="Seu nome completo" required>
+
+                    <label>CPF:</label>
+                    <input type="text" pattern="\d{11}" placeholder="Apenas números" required>
+                </div>
+
+                <label>E-mail de Contato:</label>
+                <input type="email" placeholder="seuemail@exemplo.com" required>
+
+                <label for="whatsapp">WhatsApp / Celular:</label>
+                <div class="campo-icone">
+                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000"
+                        pattern="\(\d{2}\)\s\d{5}-\d{4}" title="Formato esperado: (00) 90000-0000" required>
+                </div>
+
+                <label>Localização (Cidade/Estado/País):</label>
+                <input type="text" placeholder="Ex: Curitiba / PR / Brasil" required>
+
+                <button type="submit" class="botao-conectar">Finalizar Perfil</button>
+            </form>
+        </div>
+        <div id="rodape">
+            <p>Desenvolvido por Enzo</p>
+        </div>
+
+
+</body>
+
+</html>
