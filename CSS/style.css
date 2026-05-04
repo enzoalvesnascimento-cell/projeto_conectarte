@@ -1,174 +1,283 @@
-.logo {
-    width: 110px;
-    height: auto;
-    margin-bottom: 10px;
-    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+/* Container do Formulário */
+#sessao-login {
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 340px;
+    margin: 40px auto;
+    /* Aumenta o espaço em cima e embaixo da caixa branca */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Garante que o título "Como você deseja se conectar" também centralize */
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #b3e5fc;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.texto-cabecalho {
-    text-align: left; 
+#sessao-login {
+    margin: 40px auto;
+    /* Aumenta o espaço em cima e embaixo da caixa branca */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Garante que o título "Como você deseja se conectar" também centralize */
 }
 
-.texto-cabecalho h1 {
-    margin: 0;
+#sessao-login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todos os elementos */
+    width: 100%;
+}
+
+#sessao-login input, 
+#sessao-login select, 
+#sessao-login textarea {
+    width: 100%; 
+    max-width: 300px; /* Evita que fiquem colados na borda da caixa branca */
+    box-sizing: border-box;
+}
+
+#sessao-login .botao-conectar {
+    width: 100%;
+    /* Faz o botão ocupar toda a largura da área interna */
+    max-width: 280px;
+    /* Impede que ele fique largo demais em telas grandes */
+    margin: 10px auto;
+    /* Centraliza na horizontal */
+    display: block;
+}
+
+.botao-conectar {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+    display: block;
+}
+
+/* Estilização de Campos de Texto, Email, Tel e Select */
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 18px;
+    border: 1px solid #b3e5fc;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    font-family: inherit;
+    box-sizing: border-box;
+    /* Crucial para o tamanho não estourar */
+    display: block;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Foco nos Campos */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #00acc1;
+    box-shadow: 0 0 8px rgba(0, 172, 193, 0.3);
+}
+
+/* Customização do WhatsApp */
+input[type="tel"] {
+    padding-left: 45px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 15px center;
+}
+
+input[type="tel"]:focus {
+    border-color: #25D366;
+    /* Verde WhatsApp */
+    box-shadow: 0 0 8px rgba(37, 211, 102, 0.2);
+}
+
+/* Botões de Ação (Conectar) */
+.botao-conectar,
+input[type="submit"] {
+    background-color: #00acc1;
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s, transform 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.botao-conectar:hover,
+input[type="submit"]:hover {
+    background-color: #01579b;
+    transform: scale(1.02);
+}
+
+/* Upload de Arquivos Personalizado */
+input[type="file"] {
+    display: none;
+    /* Esconde o botão feio nativo */
+}
+
+.botao-upload {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    color: #00acc1;
+    border: 2px dashed #00acc1;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.botao-upload:hover {
+    background-color: #e0f7fa;
+    border-style: solid;
+}
+
+/* Ajustes Extras */
+textarea {
+    resize: none;
+    height: 100px;
 }
 
 .botoes-nicho {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-top: 20px;
+    /* Coloca um embaixo do outro */
+    align-items: center;
+    /* Centraliza horizontalmente */
+    justify-content: center;
+    /* Centraliza verticalmente */
+    gap: 20px;
+    /* Espaço entre os botões */
+    width: 100%;
+    /* Ocupa a largura da caixa branca */
+    padding: 10px 0;
 }
 
-.botao-conectar {
-    background-color: #00acc1; /* O azul que você já usa */
+.botoes-nicho a {
+    display: block;
+    /* Faz o link se comportar como um bloco sólido */
+    width: 80%;
+    /* Define uma largura fixa e igual para os dois */
+    text-align: center;
+    /* Centraliza o texto dentro do botão */
+    text-decoration: none;
+    background: linear-gradient(135deg, #00acc1, #00838f);
+    color: white;
+    padding: 15px 0;
+    /* Espaçamento interno */
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 172, 193, 0.3);
+    transition: 0.3s;
+}
+
+.botoes-nicho a:hover {
+    transform: translateY(-3px);
+    /* Efeito de levante */
+    box-shadow: 0 6px 15px rgba(0, 172, 193, 0.5);
+    background: linear-gradient(135deg, #00bcd4, #00acc1);
+}
+
+.botao-bolha {
+    display: inline-block;
+    text-decoration: none;
+    background: linear-gradient(135deg, #00fbff, #00acc1);
     color: white;
     padding: 12px 25px;
-    border: none;             /* Isso remove a borda preta padrão */
-    border-radius: 8px;
-    cursor: pointer;
+    border-radius: 50px;
     font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
-    outline: none;            /* Remove a linha de seleção ao clicar */
+    box-shadow: 0 4px 15px rgba(0, 251, 255, 0.4),
+                inset 0 -5px 10px rgba(0, 0, 0, 0.1),
+                inset 0 5px 10px rgba(255, 255, 255, 0.4); /* Brilho de bolha */
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.botao-conectar:hover {
-    background-color: #01579b;
-    transform: scale(1.02);   /* Dá um leve zoom ao passar o mouse */
+.botao-bolha:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 251, 255, 0.6);
+    filter: brightness(1.1);
 }
 
-/* Aplica o estilo em todos os campos de uma vez */
-input[type="text"], 
-input[type="url"], 
-input[type="number"], 
-select, 
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #b3e5fc; /* Uma borda azul bem clarinha */
-    border-radius: 5px;
-    background-color: white;
-    color: #333;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;    /* Garante que o campo não passe do limite da caixa */
+/* Título dentro da caixa branca */
+.sessao-escolha h3 {
+    color: #01579b;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
 }
 
-/* Efeito de foco: quando o usuário clica para digitar */
-input:focus, select:focus, textarea:focus {
-    border-color: #00acc1;     /* A borda fica do azul do seu tema */
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 172, 193, 0.3); /* Um brilho azul suave */
+/* Layout do Feed */
+.container-feed {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 80px auto 20px auto; /* 80px para não ficar sob a barra fixa */
+    padding: 0 20px;
 }
 
-/* 1. Esconde o input real de forma que ele ainda funcione para o navegador */
-input[type="file"] {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
+.coluna-lateral {
+    flex: 1;
+    max-width: 250px;
 }
 
-/* 2. Estiliza o Label para parecer um botão da Conectarte */
-.botao-upload {
-    display: inline-block;
-    width: 100%;
-    padding: 12px;
-    background-color: #ffffff;
-    color: #00acc1;
-    border: 2px dashed #00acc1; /* Borda tracejada dá ideia de "solte aqui" */
-    border-radius: 8px;
-    text-align: center;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s;
-    box-sizing: border-box;
-    margin-bottom: 15px;
+.coluna-principal {
+    flex: 2;
+    max-width: 600px;
 }
 
-/* 3. Efeito ao passar o mouse */
-.botao-upload:hover {
-    background-color: #e0f7fa;
-    border-style: solid;
-    transform: translateY(-2px);
-}
-
-/* 4. Efeito quando o usuário usa o teclado (acessibilidade) */
-input[type="file"]:focus + .botao-upload {
-    outline: 2px solid #01579b;
-}
-
-select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0 20px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    display: block;
-    box-sizing: border-box;
-    font-family: inherit;
-}
-
-textarea {
-    resize: none;
-}
-
-.campo-icone {
-    width: 100%;
-    display: block; /* Evita que ela tente ficar ao lado de outros elementos */
-}
-
-/* Estilo específico para o input de WhatsApp */
-input[type="tel"] {
-    width: 100%;             /* Ocupa toda a largura disponível */
-    box-sizing: border-box;  /* ESSENCIAL: Inclui o padding no cálculo da largura */
-    padding: 12px 12px 12px 40px; 
-    margin-top: 5px;
-    margin-bottom: 15px;
-    display: block;          /* Garante que ele se comporte como um bloco */
-    
-    /* Mantenha o resto das suas configurações (border, background-image, etc) */
-    border: 2px solid #e0e0e0;
-    border-radius: 8px;
-    background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png');
-    background-repeat: no-repeat;
-    background-size: 20px;
-    background-position: 12px center;
-}
-
-/* Efeito quando o usuário clica no campo */
-input[type="tel"]:focus {
-    border-color: #25D366; /* Cor oficial do WhatsApp */
-    box-shadow: 0 0 8px rgba(37, 211, 102, 0.2);
-    outline: none;
-}
-
-#cabecalho {
-    background-color: #81d4fac5;
-    padding: 20px 40px;
-    border-bottom: 3px solid #00acc1;
-    display: flex;          
-    flex-direction: row;    
-    align-items: center;    
-    justify-content: center; 
-    gap: 20px;             
-}
-
-#sessao-login {
-    background-color: rgba(255, 255, 255, 0.849);
-    width: 320px;
-    margin: 30px auto;
-    padding: 20px;
-    border-radius: 15px;
+/* Cards do Feed */
+.card-perfil, .card-post, .card-extra, .caixa-postar {
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid #b3e5fc;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-#rodape {
-    background-color: #01579b;
-    color: white;
-    padding: 10px;
-    margin-top: 50px;
+/* Estilo do Selo "Humano" */
+.selo-humano {
+    background-color: #e0f7fa;
+    color: #00acc1;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+/* Links e Botões de Sair */
+.botao-sair {
+    text-decoration: none;
+    color: #d32f2f;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.link-azul {
+    color: #00acc1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
