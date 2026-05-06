@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Conectarte - Feed</title>
+    <title>Conectarte - Dashboard</title>
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
@@ -11,13 +11,13 @@
 <body>
     <div id="fundo-site"></div>
 
+    <!--Aba de navegação-->
     <div class="barra-superior">
         <div class="container-menu">
             <div class="perfil-status">
                 <img src="Imagens/logo_conectarte.png" alt="Conectarte" class="logo-menu">
                 <div class="emblema-nivel bolha">Bolha</div>
             </div>
-
             <div class="lista-abas">
                 <a href="inicio.html" class="aba-item">Início</a>
                 <a href="marketplace.html" class="aba-item">Marketplace</a>
@@ -27,17 +27,78 @@
                 <a href="seguranca.html" class="aba-item">Segurança</a>
             </div>
 
-            <div class="area-cta">
-                <a href="postar.html" class="botao-bolha">Postar Projeto</a>
-            </div>
         </div>
     </div>
 
-    <div id="sessao-login" style="width: 600px; margin-top: 200px;">
-        <h2>Bem-vindo ao seu Ecossistema Artístico!</h2>
-        <p>Aqui você verá atualizações de projetos, novos cursos disponíveis e destaques de artes novas de seus colegas</p>
-        <div style="background: #e0f7fa; padding: 15px; border-radius: 10px; border: 1px dashed #00acc1;">
-            <strong>Dica Conectarte:</strong> Complete seu perfil na Academia para ganhar o selo Bolha.
+    <div class="container-feed">
+        <aside class="coluna-lateral">
+            <!--Academia-->
+            <div class="card-perfil">
+                <h2>Academia</h2>
+                <p><strong>Próximo Curso:</strong><br>Gestão de Contratos</p>
+                <a href="academia.html" class="link-azul">Ir para Academia</a>
+            </div>
+
+            <!--Portfólio-->
+            <section class="card-post">
+                <div class="topo-card">
+                    <h2>Portfólio</h2>
+                    <div class="carrossel-bolhas-inicio">
+                        <div class="grid-resumo-mini"></div>
+                        <div style="margin-top: 20px;">
+                            <a href="postar.html" class="botao-padrao-sidebar">Postar Projeto</a>
+                            <a href="portfolio.html" class="botao-padrao-sidebar">Ver Completo</a>
+                        </div>
+                    </div>
+            </section>
+        </aside>
+
+        <main class="coluna-principal">
+            <!--Marketplace-->
+            <div class="card-post">
+                <h2>Marketplace</h2>
+                <span class="selo-humano">100% Humano</span>
+                <h4>Ilustração de RPG - Personagem</h4>
+                <p>Orçamento: R$ 350,00 | Prazo: 10 dias</p>
+                <button class="botao-conectar">Tenho Interesse</button>
+            </div>
+            <!--Comunidade-->
+            <div class="card-extra">
+                <h2>Comunidade</h2>
+                <p>#DireitosAutorais está em alta no fórum.</p>
+                <a href="comunidade.html" class="link-azul">Participar da conversa</a>
+            </div>
+        </main>
+
+        <aside class="coluna-lateral">
+            <!--Fila de espera-->
+            <div class="card-extra">
+                <h3>Fila de espera</h3>
+                <div class="item-prazo urgente">
+                    <strong>Sketch - Maria</strong><br>Entrega amanhã!
+                </div>
+                <div class="item-prazo tranquilo">
+                    <strong>Arte Final - João</strong><br>Prazo: 4 dias
+                </div>
+            </div>
+            <!--Concursos-->
+            <div class="card-extra">
+                <h3>Concursos</h3>
+                <p>Concurso de desenho: tema comida</p>
+                <p>Inscrição: R$5,00</p>
+            </div>
+        </aside>
+    </div>
+
+    <div id="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2026 Conectarte - Viva a tecnologia. Sinta a arte.</p>
+            <div class="rodape-links">
+                <a href="#">Termos de Uso</a> |
+                <a href="#">Privacidade</a> |
+                <a href="#">Suporte</a>
+            </div>
+            <p style="font-size: 0.7rem; margin-top: 10px; opacity: 0.7;">Desenvolvido por Enzo</p>
         </div>
     </div>
 </body>

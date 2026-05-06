@@ -10,6 +10,7 @@
 
 <body>
     <div id="fundo-site"></div>
+    <!--Cabeçalho-->
     <div id="cabecalho">
         <img src="Imagens/logo_conectarte.png" alt="Logo Conectarte" class="logo">
         <div class="texto-cabecalho">
@@ -18,6 +19,7 @@
         </div>
     </div>
 
+    <!--Cadastro-->
     <div id="conteudo-principal">
         <div class="texto-apresentacao">
             <h2>Encontre o talento ideal!</h2>
@@ -26,29 +28,40 @@
 
         <div id="sessao-login">
             <h3>Cadastro de Empresa / Contratante</h3>
-            <form action="inicio.html">
-                <label>Nome do Responsável / Nome Fantasia:</label>
-                <input type="text" placeholder="Como quer ser chamado na vitrine?" required>
+            <div>
+                <form action="inicio.html">
+                    <label>Nome do Responsável / Nome Fantasia:</label>
+                    <input type="text" placeholder="Como quer ser chamado na vitrine?" required>
 
-                <label>CNPJ / CPF (Uso interno):</label>
-                <input type="text" pattern="\d{11}|\d{14}" placeholder="Apenas números para segurança e NF" required>
+                    <label>CNPJ / CPF (Uso interno):</label>
+                    <input type="text" pattern="\d{11}|\d{14}" placeholder="Apenas números para segurança e NF"
+                        required>
 
-                <label>E-mail Corporativo:</label>
-                <input type="email" placeholder="contato@empresa.com" required>
+                    <label>E-mail Corporativo:</label>
+                    <input type="email" placeholder="contato@empresa.com" required>
 
-                <label for="whatsapp">WhatsApp / Celular:</label>
-                <div class="campo-icone">
-                    <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000"
-                        pattern="\(\d{2}\)\s\d{5}-\d{4}" title="Formato esperado: (00) 90000-0000" required>
-                </div>
+                    <label for="whatsapp">WhatsApp / Celular:</label>
+                    <div class="campo-icone">
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="(00) 90000-0000"
+                            pattern="\(\d{2}\)\s\d{5}-\d{4}" title="Formato esperado: (00) 90000-0000" required>
+                    </div>
 
-                <button type="submit" class="botao-conectar">Conectar-te</button>
-            </form>
+                    <button type="submit" class="botao-conectar">Conectar-te</button>
+                </form>
+            </div>
         </div>
         <div id="rodape">
-            <p>Desenvolvido por Enzo</p>
+            <div class="rodape-conteudo">
+                <p>&copy; 2026 Conectarte - Viva a tecnologia. Sinta a arte.</p>
+                <div class="rodape-links">
+                    <a href="#">Termos de Uso</a> |
+                    <a href="#">Privacidade</a> |
+                    <a href="#">Suporte</a>
+                </div>
+                <p style="font-size: 0.7rem; margin-top: 10px; opacity: 0.7;">Desenvolvido por Enzo</p>
+            </div>
         </div>
-
+    </div>
 
 </body>
 

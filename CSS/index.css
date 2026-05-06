@@ -1,14 +1,14 @@
-/* Configurações de Base e Tipografia */
+/* Definições globais de layout, cores de texto e tipografia padrão */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #01579b;
+    color: #01579b; 
     overflow-x: hidden;
 }
 
-/* Fundo com efeito Blur (Frutiger Aero Style) */
+/* Camada de fundo fixa com tratamento visual de desfoque e ajuste de escala */
 #fundo-site {
     position: fixed;
     top: 0;
@@ -21,26 +21,27 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    filter: blur(8px);
-    transform: scale(1.1); /* Evita bordas brancas no blur */
+    filter: blur(8px); 
+    transform: scale(1.1); 
 }
 
-/* Barra Superior Fixa (LinkedIn/CIEE) */
+/* Navegação principal suspensa com propriedades de transparência e desfoque de fundo */
 .barra-superior {
-    width: 95%; /* Não encosta nas bordas para parecer que flutua */
+    width: 95%; 
     max-width: 1200px;
     margin: 10px auto;
     background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(15px); /* Efeito de vidro fosco */
+    backdrop-filter: blur(15px); 
     -webkit-backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 50px; /* Bordas bem arredondadas */
+    border-radius: 50px; 
     position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 1000;
     box-shadow: 0 8px 32px rgba(0, 172, 193, 0.2);
 }
 
+/* Alinhamento flexível dos itens internos do menu superior */
 .container-menu {
     display: flex;
     justify-content: space-between;
@@ -48,6 +49,7 @@ body {
     padding: 8px 25px;
 }
 
+/* Identificadores visuais de categoria com sombras internas para legibilidade */
 .emblema-nivel {
     padding: 5px 15px;
     border-radius: 20px;
@@ -57,15 +59,18 @@ body {
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
 
+/* Variações de cores em gradiente para os níveis de usuário */
 .agua { background: linear-gradient(to bottom, #4fc3f7, #0288d1); }
-.bolha { background: linear-gradient(to bottom, #81c784, #388e3c); } /* Verde Água */
+.bolha { background: linear-gradient(to bottom, #81c784, #388e3c); }
 .cristalino { background: linear-gradient(to bottom, #ba68c8, #7b1fa2); }
 
+/* Estrutura de lista horizontal para os links de navegação */
 .lista-abas {
     display: flex;
     gap: 10px;
 }
 
+/* Estilização individual dos links com transição suave de cores e sombras */
 .aba-item {
     text-decoration: none;
     color: #01579b;
@@ -76,12 +81,14 @@ body {
     transition: 0.3s;
 }
 
+/* Estado de interação para realce visual ao passar o mouse nos itens do menu */
 .aba-item:hover {
     background: rgba(255, 255, 255, 0.5);
     color: #00acc1;
     box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
+/* Ajustes gerais de espaçamento e bordas para links dentro da lista */
 .lista-abas a {
     text-decoration: none;
     color: #01579b;
@@ -95,29 +102,31 @@ body {
     background-color: #e0f7fa;
 }
 
-/* Cabeçalho da Página (Logo e Título) */
+/* Seção de identidade do site com alinhamento central e borda de destaque inferior */
 #cabecalho {
-    background-color: rgba(129, 212, 250, 0.8); /* Mais brilho e transparência */
+    background-color: rgba(129, 212, 250, 0.8); 
     padding: 20px;
     border-bottom: 3px solid #00acc1;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px; /* Espaço entre logo e texto */
+    gap: 30px; 
 }
 
+/* Controle de dimensões e brilho externo para as imagens de logotipo */
 .logo {
-    width: 80px; /* Tamanho ideal para não ocupar a tela toda */
+    width: 80px; 
     height: auto;
     filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
 }
 
 .logo-menu {
-    width: 50px; /* Tamanho ideal para não ocupar a tela toda */
+    width: 50px; 
     height: auto;
     filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.8));
 }
 
+/* Formatação do título principal com sombreamento para contraste sobre o azul */
 .texto-cabecalho h1 {
     font-size: 2.2rem;
     margin: 0;
@@ -125,23 +134,19 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 105, 137, 0.3);
 }
 
-.texto-cabecalho h1 {
-    margin: 0;
-    color: #ffffff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
+/* Formatação de tabelas de dados com cantos arredondados e elevação suave */
 table {
     width: 90%;
     max-width: 800px;
     margin: 30px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* Fundo mais sólido para ler melhor */
+    background-color: rgba(255, 255, 255, 0.9); 
     border-collapse: collapse;
     border-radius: 10px;
-    overflow: hidden; /* Para o arredondamento funcionar */
+    overflow: hidden; 
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* Estilo para cabeçalhos de tabela com caixa alta e fundo sólido */
 th {
     background-color: #00acc1;
     color: white;
@@ -150,17 +155,19 @@ th {
     font-size: 0.9rem;
 }
 
+/* Estilo para células de dados com separadores horizontais suaves */
 td {
     padding: 12px;
     border-bottom: 1px solid #e0f7fa;
     color: #01579b;
 }
 
+/* Indicador visual de linha ativa para facilitar a leitura de dados */
 tr:hover {
-    background-color: #f1f8fb; /* Efeito ao passar o mouse na linha */
+    background-color: #f1f8fb; 
 }
 
-/* Rodapé */
+/* Área de encerramento da página com preenchimento total da largura */
 #rodape {
     background-color: #01579b;
     color: white;

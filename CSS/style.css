@@ -1,53 +1,43 @@
-/* Container do Formulário */
+/* Bloco centralizador do formulário com transparência e bordas arredondadas */
 #sessao-login {
     background-color: rgba(255, 255, 255, 0.9);
     width: 340px;
     margin: 40px auto;
-    /* Aumenta o espaço em cima e embaixo da caixa branca */
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Garante que o título "Como você deseja se conectar" também centralize */
     padding: 25px;
     border-radius: 15px;
     border: 1px solid #b3e5fc;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-#sessao-login {
-    margin: 40px auto;
-    /* Aumenta o espaço em cima e embaixo da caixa branca */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* Garante que o título "Como você deseja se conectar" também centralize */
-}
-
+/* Alinhamento vertical dos elementos internos do formulário */
 #sessao-login form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza todos os elementos */
+    align-items: center;
     width: 100%;
 }
 
-#sessao-login input, 
-#sessao-login select, 
+/* Padronização de largura máxima para campos de entrada de dados */
+#sessao-login input,
+#sessao-login select,
 #sessao-login textarea {
-    width: 100%; 
-    max-width: 300px; /* Evita que fiquem colados na borda da caixa branca */
+    width: 100%;
+    max-width: 300px;
     box-sizing: border-box;
 }
 
+/* Ajuste específico de largura para botões dentro da sessão de login */
 #sessao-login .botao-conectar {
     width: 100%;
-    /* Faz o botão ocupar toda a largura da área interna */
     max-width: 280px;
-    /* Impede que ele fique largo demais em telas grandes */
     margin: 10px auto;
-    /* Centraliza na horizontal */
     display: block;
 }
 
+/* Definição geral de comportamento de bloco para botões de conexão */
 .botao-conectar {
     width: 100%;
     max-width: 300px;
@@ -55,7 +45,7 @@
     display: block;
 }
 
-/* Estilização de Campos de Texto, Email, Tel e Select */
+/* Estilização universal de campos de texto e seleção com transições suaves */
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -73,13 +63,12 @@ textarea {
     color: #333;
     font-family: inherit;
     box-sizing: border-box;
-    /* Crucial para o tamanho não estourar */
     display: block;
     outline: none;
     transition: 0.3s;
 }
 
-/* Foco nos Campos */
+/* Realce visual de foco com mudança de cor e brilho externo */
 input:focus,
 select:focus,
 textarea:focus {
@@ -87,7 +76,7 @@ textarea:focus {
     box-shadow: 0 0 8px rgba(0, 172, 193, 0.3);
 }
 
-/* Customização do WhatsApp */
+/* Estilização do campo telefônico com ícone de rede social integrado ao fundo */
 input[type="tel"] {
     padding-left: 45px;
     background-image: url('https://cdn-icons-png.flaticon.com/512/733/733585.png');
@@ -96,13 +85,13 @@ input[type="tel"] {
     background-position: 15px center;
 }
 
+/* Mudança de cor temática para o foco no campo de WhatsApp */
 input[type="tel"]:focus {
     border-color: #25D366;
-    /* Verde WhatsApp */
     box-shadow: 0 0 8px rgba(37, 211, 102, 0.2);
 }
 
-/* Botões de Ação (Conectar) */
+/* Design dos botões de ação principal com tipografia em caixa alta */
 .botao-conectar,
 input[type="submit"] {
     background-color: #00acc1;
@@ -118,18 +107,19 @@ input[type="submit"] {
     letter-spacing: 1px;
 }
 
+/* Efeito de profundidade e alteração de tonalidade ao pairar o mouse */
 .botao-conectar:hover,
 input[type="submit"]:hover {
     background-color: #01579b;
     transform: scale(1.02);
 }
 
-/* Upload de Arquivos Personalizado */
+/* Ocultação do seletor de arquivo padrão do navegador */
 input[type="file"] {
     display: none;
-    /* Esconde o botão feio nativo */
 }
 
+/* Estilização customizada da área de upload com bordas tracejadas */
 .botao-upload {
     display: block;
     width: 100%;
@@ -146,116 +136,127 @@ input[type="file"] {
     transition: 0.3s;
 }
 
+/* Feedback visual para área de upload ativa */
 .botao-upload:hover {
     background-color: #e0f7fa;
     border-style: solid;
 }
 
-/* Ajustes Extras */
+/* Bloqueio de redimensionamento e definição de altura fixa para caixas de texto */
 textarea {
     resize: none;
     height: 100px;
 }
 
+/* Organizador flexível para botões de escolha de perfil (nicho) */
 .botoes-nicho {
     display: flex;
     flex-direction: column;
-    /* Coloca um embaixo do outro */
     align-items: center;
-    /* Centraliza horizontalmente */
     justify-content: center;
-    /* Centraliza verticalmente */
     gap: 20px;
-    /* Espaço entre os botões */
     width: 100%;
-    /* Ocupa a largura da caixa branca */
     padding: 10px 0;
 }
 
+/* Estilização dos links de nicho com gradiente linear e formato de pílula */
 .botoes-nicho a {
     display: block;
-    /* Faz o link se comportar como um bloco sólido */
     width: 80%;
-    /* Define uma largura fixa e igual para os dois */
     text-align: center;
-    /* Centraliza o texto dentro do botão */
     text-decoration: none;
     background: linear-gradient(135deg, #00acc1, #00838f);
     color: white;
     padding: 15px 0;
-    /* Espaçamento interno */
     border-radius: 50px;
     font-weight: bold;
     box-shadow: 0 4px 10px rgba(0, 172, 193, 0.3);
     transition: 0.3s;
 }
 
+/* Animação de flutuação e intensificação do brilho ao interagir com as opções de nicho */
 .botoes-nicho a:hover {
     transform: translateY(-3px);
-    /* Efeito de levante */
     box-shadow: 0 6px 15px rgba(0, 172, 193, 0.5);
     background: linear-gradient(135deg, #00bcd4, #00acc1);
 }
 
-.botao-bolha {
-    display: inline-block;
+/* Estilização dos botões das colunas laterais com estética de pílula e gradiente profundo */
+.botao-padrao-sidebar {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 12px 0;
+    text-align: center;
     text-decoration: none;
-    background: linear-gradient(135deg, #00fbff, #00acc1);
-    color: white;
-    padding: 12px 25px;
-    border-radius: 50px;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0, 251, 255, 0.4),
-                inset 0 -5px 10px rgba(0, 0, 0, 0.1),
-                inset 0 5px 10px rgba(255, 255, 255, 0.4); /* Brilho de bolha */
+    border-radius: 25px;
+    background: linear-gradient(135deg, #00acc1, #01579b);
+    color: white;
+    border: none;
+    cursor: pointer;
     transition: 0.3s;
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.botao-bolha:hover {
-    transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 251, 255, 0.6);
+/* Feedback visual de escala e aumento de luminosidade no hover */
+.botao-padrao-sidebar:hover {
+    transform: scale(1.02);
     filter: brightness(1.1);
 }
 
-/* Título dentro da caixa branca */
+/* Formatação do texto de chamada dentro do container de seleção */
 .sessao-escolha h3 {
     color: #01579b;
     margin-bottom: 20px;
     font-size: 1.1rem;
 }
 
-/* Layout do Feed */
+/* Configuração do contêiner principal usando Flexbox para organizar o dashboard */
 .container-feed {
     display: flex;
     justify-content: center;
     gap: 20px;
-    max-width: 1100px;
-    margin: 80px auto 20px auto; /* 80px para não ficar sob a barra fixa */
+    max-width: 1200px;
+    margin-top: 110px;
     padding: 0 20px;
 }
 
+/* Definição de proporções: as laterais ocupam 1 fração do espaço disponível */
 .coluna-lateral {
     flex: 1;
-    max-width: 250px;
+    max-width: 280px;
+    min-width: 220px;
 }
 
+/* A coluna central ocupa o dobro do espaço das laterais (proporção 2:1) */
 .coluna-principal {
     flex: 2;
     max-width: 600px;
 }
 
-/* Cards do Feed */
-.card-perfil, .card-post, .card-extra, .caixa-postar {
+/* Estilização padronizada para todos os cartões de conteúdo da interface */
+.card-perfil,
+.card-post,
+.card-extra,
+.caixa-postar {
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid #b3e5fc;
-    border-radius: 12px;
-    padding: 15px;
+    border-radius: 15px;
+    padding: 20px;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 172, 193, 0.1);
 }
 
-/* Estilo do Selo "Humano" */
+/* Espaçamento e tipografia para itens de listagem de prazos */
+.item-prazo {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+/* Componente de etiqueta para destacar conteúdo produzido por humanos */
 .selo-humano {
     background-color: #e0f7fa;
     color: #00acc1;
@@ -267,17 +268,82 @@ textarea {
     margin: 10px 0;
 }
 
-/* Links e Botões de Sair */
-.botao-sair {
-    text-decoration: none;
-    color: #d32f2f;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-
+/* Estilo para hiperlinks de destaque com a cor identidade do projeto */
 .link-azul {
     color: #00acc1;
     text-decoration: none;
     font-weight: bold;
     font-size: 0.9rem;
+}
+
+/* Reiteração das proporções das colunas para garantir hierarquia visual */
+.coluna-lateral {
+    flex: 1;
+    max-width: 280px;
+    min-width: 200px;
+}
+
+.coluna-principal {
+    flex: 2;
+    max-width: 650px;
+}
+
+/* Alerta visual para prazos críticos usando tons de laranja */
+.urgente {
+    background: rgba(255, 167, 38, 0.15);
+    border-left: 4px solid #ffa726;
+}
+
+/* Indicador visual para prazos confortáveis usando tons de verde */
+.tranquilo {
+    background: rgba(129, 199, 132, 0.15);
+    border-left: 4px solid #81c784;
+}
+
+/* Media Query: Reorganiza o layout de 3 colunas para 1 coluna em dispositivos móveis */
+@media (max-width: 900px) {
+    .container-feed {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna-lateral,
+    .coluna-principal {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Seletores de suporte para garantir a integridade do modelo de caixas */
+.coluna-lateral {
+    flex: 1;
+    max-width: 280px;
+}
+
+.coluna-principal {
+    flex: 2;
+    max-width: 600px;
+}
+
+/* --- ESTILO DO RODAPÉ --- */
+#rodape {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px); /* Efeito de vidro */
+    border-top: 1px solid #b3e5fc;
+    padding: 20px 0;
+    margin-top: 40px;
+    color: #01579b;
+}
+
+.rodape-links a {
+    color: #00acc1;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.rodape-links a:hover {
+    text-decoration: underline;
 }
